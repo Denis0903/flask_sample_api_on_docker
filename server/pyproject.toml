@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "server"
+version = "0.1.0"
+description = "M service API"
+authors = ["Kentaro Sakamoto"]
+
+[tool.poetry.dependencies]
+python = "^3.9.0"
+numpy = "^1.18.1"
+uwsgi = "^2.0.18"
+sqlalchemy = "^1.3.16"
+flake8 = "^3.7.9"
+psycopg2-binary = "^2.8.5"
+asyncio = "^3.4.3"
+flask-cors = "^3.0.8"
+Flask = {extras = ["async"], version = "^2.0.1"}
+boto3 = "^1.18.58"
+botocore = "^1.21.58"
+firebase-admin = "^5.0.3"
+pyotp = "^2.6.0"
+
+[tool.poetry.dev-dependencies]
+flake8 = "^3.7.9"
+flask-cors = "^3.0.8"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"

@@ -1,0 +1,23 @@
+version: "3"
+services:
+  api:
+    build:
+      context: ./server
+      dockerfile: ./Dockerfile
+    ports:
+      - "9191:9191"
+      - "8080:8080"
+    environment:
+      - ENV=$ENV
+      - POSTGRES_HOST=$POSTGRES_HOST
+      - POSTGRES_USER=$POSTGRES_USER
+      - POSTGRES_PASSWORD=$POSTGRES_PASSWORD
+      - POSTGRES_DB=$POSTGRES_DB
+      - POSTGRES_PORT=$POSTGRES_PORT
+    networks:
+      - sample_net
+networks:
+  sample_net:
+    driver: bridge
+volumes:
+  my_dbdata:
